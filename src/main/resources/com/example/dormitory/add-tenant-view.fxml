@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.dormitory.AddTenantController"
+      spacing="10" alignment="CENTER" style="-fx-padding: 20;">
+
+    <Label text="Add Tenant" style="-fx-font-size: 16px;" />
+
+    <TextField fx:id="nameField" promptText="Enter Name"/>
+    <TextField fx:id="contactField" promptText="Enter Contact"/>
+
+    <HBox spacing="10">
+        <Button text="Save" onAction="#handleSave"/>
+        <Button text="Cancel" onAction="#handleCancel"/>
+    </HBox>
+
+</VBox>
