@@ -15,6 +15,8 @@ Project Title
 - Solves the ineffiency, inaccurasies, and high administrative workload associated with manual, paper-based management of boarding houses or dormintories. It allows landlords or managers to automate tasks such as rent collection, room assignments, and maintenance requests, increasing profitability and improving experience.
 
 ## Proposed Features
+- Track Room Payments
+- add/delete
 
 ## Planned Technologies
 - Java
