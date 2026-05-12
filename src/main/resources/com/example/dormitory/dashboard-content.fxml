@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15"
+      alignment="TOP_CENTER"
+      xmlns:fx="http://javafx.com/fxml"
+      style="-fx-padding: 20; -fx-background-color: #ECF0F1;">
+
+    <HBox spacing="15" alignment="CENTER">
+        <VBox alignment="CENTER" spacing="5"
+              style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);"
+              prefWidth="140" prefHeight="90">
+            <Label text="Total Tenants" style="-fx-font-size: 12px; -fx-text-fill: #7F8C8D;"/>
+            <Label text="1" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2C3E50;"/>
+        </VBox>
+
+        <VBox alignment="CENTER" spacing="5"
+              style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);"
+              prefWidth="140" prefHeight="90">
+            <Label text="Active" style="-fx-font-size: 12px; -fx-text-fill: #7F8C8D;"/>
+            <Label text="1" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #27AE60;"/>
+        </VBox>
+
+        <VBox alignment="CENTER" spacing="5"
+              style="-fx-background-color: white; -fx-padding: 15; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);"
+              prefWidth="140" prefHeight="90">
+            <Label text="Evicted" style="-fx-font-size: 12px; -fx-text-fill: #7F8C8D;"/>
+            <Label text="0" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #E74C3C;"/>
+        </VBox>
+
+    </HBox>
+
+    <Separator/>
+
+    <Label text="Tenant List"
+           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #2C3E50;"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT" prefWidth="700">
+        <Label text="Search:" style="-fx-font-weight: bold; -fx-text-fill: #7F8C8D;"/>
+        <TextField promptText="Search by name, ID, room, or contact..."
+                   style="-fx-padding: 8; -fx-background-radius: 5; -fx-border-color: #BDC3C7; -fx-border-radius: 5;"
+                   HBox.hgrow="ALWAYS"/>
+        <Button text="Search"
+                style="-fx-background-color: #3498DB; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 20; -fx-background-radius: 5; -fx-cursor: hand;"/>
+    </HBox>
+
+    <TableView prefHeight="350" prefWidth="800"
+               style="-fx-background-color: white; -fx-background-radius: 8;">
+
+        <columns>
+            <TableColumn text="ID" prefWidth="100"/>
+            <TableColumn text="Name" prefWidth="200"/>
+            <TableColumn text="Room" prefWidth="150"/>
+        </columns>
+
+    </TableView>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="View Details"
+                style="-fx-background-color: #3498DB; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 20; -fx-background-radius: 5; -fx-cursor: hand;"/>
+        <Button text="Evict Tenant"
+                style="-fx-background-color: #E74C3C; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 8 20; -fx-background-radius: 5; -fx-cursor: hand;"/>
+    </HBox>
+
+    <VBox spacing="3" alignment="CENTER_LEFT" style="-fx-padding: 10;">
+        <Label text="Instructions:" style="-fx-font-weight: bold; -fx-text-fill: #7F8C8D; -fx-font-size: 12px;"/>
+        <Label text="• Select a tenant from the table to perform actions" style="-fx-font-size: 11px; -fx-text-fill: #95A5A6;"/>
+        <Label text="• 'Remove Tenant' - Permanently deletes the tenant and vacates the room" style="-fx-font-size: 11px; -fx-text-fill: #95A5A6;"/>
+        <Label text="• 'Evict Tenant' - Marks tenant as evicted and vacates the room (keeps record)" style="-fx-font-size: 11px; -fx-text-fill: #95A5A6;"/>
+        <Label text="• Use search bar to find specific tenants" style="-fx-font-size: 11px; -fx-text-fill: #95A5A6;"/>
+    </VBox>
+
+</VBox>
