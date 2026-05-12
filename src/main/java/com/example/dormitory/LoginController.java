@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.dormitory;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
