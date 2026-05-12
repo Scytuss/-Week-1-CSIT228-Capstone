@@ -4,17 +4,33 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox alignment="CENTER"
-      spacing="10">
+      spacing="20"
+      style="-fx-padding: 40;">
 
     <Label text="Welcome to your Dorm!"
            style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-text-fill: #2C3E50;"/>
-
     <Label text="Select an option."
            style="-fx-font-size: 16px; -fx-text-fill: #7F8C8D;"/>
 
-    <Label text="Can you display here da due date and rent."
-           style="-fx-font-size: 16px; -fx-text-fill: #7F8C8D;"/>
+    <Label text="Your Current Rental Details"
+           style="-fx-font-size: 18px; -fx-text-fill: #7F8C8D;"/>
 
-    <Label text="Big text n shi"
-           style="-fx-font-size: 16px; -fx-text-fill: #7F8C8D;"/>
+    <VBox alignment="CENTER"
+          spacing="5"
+          style="-fx-background-color: #2C3E50; -fx-padding: 30 50; -fx-background-radius: 15;">
+        <Label text="MONTHLY RENT"
+               style="-fx-font-size: 14px; -fx-text-fill: #7F8C8D;"/>
+        <Label text="USD 120.00"
+               style="-fx-font-size: 48px; -fx-font-weight: bold; -fx-text-fill: #2ECC71;"/>
+    </VBox>
+
+    <VBox alignment="CENTER"
+          spacing="5"
+          style="-fx-background-color: #2C3E50; -fx-padding: 30 50; -fx-background-radius: 15;">
+        <Label text="NEXT DUE DATE"
+               style="-fx-font-size: 14px; -fx-text-fill: #7F8C8D;"/>
+        <Label text="May 12, 2026"
+               style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: #E74C3C;"/>
+    </VBox>
+
 </VBox>
