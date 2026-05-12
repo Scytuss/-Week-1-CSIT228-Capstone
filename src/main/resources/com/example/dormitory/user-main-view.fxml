@@ -25,6 +25,10 @@
                     prefWidth="160"
                     onAction="#handleTransactionHistory"/>
 
+            <Button text="Rent Notification"
+                    prefWidth="160"
+                    onAction="#handleRentNotification"/>
+
         </VBox>
     </left>
 

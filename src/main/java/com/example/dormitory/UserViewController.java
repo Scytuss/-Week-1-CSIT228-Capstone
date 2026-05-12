@@ -65,4 +65,18 @@ public class UserViewController {
             e.printStackTrace();
         }
     }
+
+    @FXML
+    private void handleRentNotification() {
+        try {
+            Node view = FXMLLoader.load(
+                    getClass().getResource("notify-user-view.fxml")
+            );
+
+            contentPane.getChildren().setAll(view);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
