@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 
 <BorderPane xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.demo.PaymentController">
+            fx:controller="com.example.dormitory.PaymentController">
 
     <top>
 
