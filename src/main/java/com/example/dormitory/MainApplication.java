@@ -15,6 +15,8 @@ public class MainApplication extends Application {
             Scene scene = new Scene(fxmlLoader.load(), 320, 240);
             stage.setTitle("Dormitory / Boarding House Management System");
             stage.setScene(scene);
+            stage.setMinWidth(760);
+            stage.setMinHeight(520);
             stage.show();
         } catch (Exception e) {
             e.printStackTrace();
