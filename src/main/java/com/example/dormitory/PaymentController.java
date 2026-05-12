@@ -1,6 +1,6 @@
-package com.example.demo;
+package com.example.dormitory;
 
-import com.example.demo.Tenant;
+import com.example.dormitory.Tenant;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
