@@ -5,7 +5,6 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.Label?>
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.dormitory.UserViewController">
     <left>
@@ -15,19 +14,23 @@
 
             <Button text="Dashboard"
                     prefWidth="160"
-                    onAction="#handleUserDashboard"/>
+                    onAction="#handleUserDashboard"
+                    style="-fx-background-color: #34495E; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10; -fx-background-radius: 5; -fx-cursor: hand;"/>
 
             <Button text="Payment"
                     prefWidth="160"
-                    onAction="#handlePayment"/>
+                    onAction="#handlePayment"
+                    style="-fx-background-color: #34495E; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10; -fx-background-radius: 5; -fx-cursor: hand;"/>
 
             <Button text="Transaction History"
                     prefWidth="160"
-                    onAction="#handleTransactionHistory"/>
+                    onAction="#handleTransactionHistory"
+                    style="-fx-background-color: #34495E; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10; -fx-background-radius: 5; -fx-cursor: hand;"/>
 
             <Button text="Rent Notification"
                     prefWidth="160"
-                    onAction="#handleRentNotification"/>
+                    onAction="#handleRentNotification"
+                    style="-fx-background-color: #34495E; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10; -fx-background-radius: 5; -fx-cursor: hand;"/>
 
         </VBox>
     </left>
