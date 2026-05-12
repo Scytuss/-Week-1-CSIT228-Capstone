@@ -3,16 +3,99 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" prefHeight="223.0" prefWidth="278.0" spacing="15" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="com.example.dormitory.UserPaymentController">
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
 
-    <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="PAYMENT PAGE" />
+<VBox alignment="TOP_CENTER" spacing="20"
+      xmlns:fx="http://javafx.com/fxml"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      fx:controller="com.example.dormitory.UserPaymentController"
+      style="-fx-padding: 30; -fx-background-color: #ECF0F1;">
 
-    <Label fx:id="nameLabel" />
+    <Label text="PAYMENT"
+           style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2C3E50;"/>
 
-    <Label fx:id="dueDateLabel" />
+    <Separator prefWidth="500"/>
 
-    <ComboBox fx:id="paymentOptionBox" promptText="Select Payment Option" />
+    <VBox spacing="15"
+          style="-fx-background-color: white; -fx-padding: 30; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);"
+          prefWidth="400">
 
-    <Button onAction="#handlePayment" text="Pay Rent" />
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <Label text="Tenant:" style="-fx-font-weight: bold; -fx-text-fill: #7F8C8D;" prefWidth="120"/>
+            <Label fx:id="nameLabel" style="-fx-text-fill: #2C3E50; -fx-font-weight: bold;"/>
+        </HBox>
+
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <Label text="Room:" style="-fx-font-weight: bold; -fx-text-fill: #7F8C8D;" prefWidth="120"/>
+            <Label fx:id="roomLabel" style="-fx-text-fill: #2C3E50;"/>
+        </HBox>
+
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <Label text="Monthly Rent:" style="-fx-font-weight: bold; -fx-text-fill: #7F8C8D;" prefWidth="120"/>
+            <Label fx:id="rentLabel" style="-fx-text-fill: #27AE60; -fx-font-weight: bold;"/>
+        </HBox>
+
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <Label text="Due Date:" style="-fx-font-weight: bold; -fx-text-fill: #7F8C8D;" prefWidth="120"/>
+            <Label fx:id="dueDateLabel" style="-fx-text-fill: #E74C3C; -fx-font-weight: bold;"/>
+        </HBox>
+
+        <Separator/>
+
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <Label text="Days Overdue:" style="-fx-font-weight: bold; -fx-text-fill: #7F8C8D;" prefWidth="120"/>
+            <Label fx:id="daysOverdueLabel" style="-fx-text-fill: #E74C3C;"/>
+        </HBox>
+
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <Label text="Late Fee:" style="-fx-font-weight: bold; -fx-text-fill: #7F8C8D;" prefWidth="120"/>
+            <Label fx:id="lateFeeLabel" style="-fx-text-fill: #E67E22;"/>
+        </HBox>
+
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <Label text="Total Amount:" style="-fx-font-weight: bold; -fx-text-fill: #7F8C8D;" prefWidth="120"/>
+            <Label fx:id="totalAmountLabel" style="-fx-text-fill: #C0392B; -fx-font-weight: bold; -fx-font-size: 18px;"/>
+        </HBox>
+
+        <Separator/>
+
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <Label text="Payment Method:" style="-fx-font-weight: bold; -fx-text-fill: #7F8C8D;" prefWidth="120"/>
+            <ComboBox fx:id="paymentOptionBox" promptText="Select Payment Option" prefWidth="200"
+                      style="-fx-background-color: white; -fx-border-color: #BDC3C7; -fx-border-radius: 5;">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Cash" />
+                        <String fx:value="GCash" />
+                        <String fx:value="PayMaya" />
+                        <String fx:value="Bank Transfer" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+        </HBox>
+
+        <HBox spacing="20" alignment="CENTER_LEFT">
+            <Label text="Reference # (optional):" style="-fx-font-weight: bold; -fx-text-fill: #7F8C8D;" prefWidth="120"/>
+            <TextField fx:id="referenceField" prefWidth="200" promptText="Enter reference number"
+                       style="-fx-background-color: white; -fx-border-color: #BDC3C7; -fx-border-radius: 5; -fx-padding: 8;"/>
+        </HBox>
+
+        <HBox spacing="20" alignment="CENTER">
+            <!-- Green Confirm Button -->
+            <Button onAction="#handlePayment" text="CONFIRM PAYMENT"
+                    style="-fx-background-color: #27AE60; -fx-text-fill: white; -fx-font-weight: bold; -fx-padding: 10 30; -fx-background-radius: 5; -fx-cursor: hand;"/>
+        </HBox>
+
+    </VBox>
+
+    <!-- Payment Instructions -->
+    <VBox spacing="5" alignment="CENTER"
+          style="-fx-padding: 15;">
+        <Label text="💡 Payment Instructions" style="-fx-font-weight: bold; -fx-text-fill: #3498DB;"/>
+        <Label text="• Select payment method and confirm payment" style="-fx-font-size: 12px; -fx-text-fill: #7F8C8D;"/>
+        <Label text="• Late fee: ₱50/day after due date" style="-fx-font-size: 12px; -fx-text-fill: #7F8C8D;"/>
+        <Label text="• Keep your reference number for disputes" style="-fx-font-size: 12px; -fx-text-fill: #7F8C8D;"/>
+    </VBox>
 
 </VBox>
