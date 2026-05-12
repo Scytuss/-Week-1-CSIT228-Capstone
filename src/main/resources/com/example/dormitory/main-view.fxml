@@ -12,7 +12,7 @@
 
 
 <?import javafx.scene.layout.StackPane?>
-<BorderPane xmlns:fx="http:javafx.com/fxml" fx:controller="com.example.dormitory.MainController">
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.dormitory.MainController">
     <top>
         <HBox spacing="10" style="-fx-padding: 10; -fx-background-color: #ecf0f1;">
             <Label text="Dormitory and Boarding House Management System" style="-fx-text-fill: white; -fx-font-size: 16px;"/>
@@ -23,7 +23,7 @@
             <Button text="Dashboard" onAction="#handleDashboard"/>
             <Button text="Add Tenant" onAction="#handleAddTenant"/>
             <Button text="Rooms"/>
-            <Button text="Payments"/>
+            <Button text="Payments" onAction="#handlePayment"/>
         </VBox>
     </left>
     <center>
